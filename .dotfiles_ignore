@@ -1,0 +1,12 @@
+## exclude everything
+/*
+
+### USER CONFIG ###
+## uncomment to include all dotfiles
+#!/.*
+
+
+### DOTFILES CONFIG - DO NOT MODIFY ###
+!/.dotfiles_ignore
+/.dotfiles/
+
