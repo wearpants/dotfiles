@@ -1,0 +1,75 @@
+# examples at http://dotfiles.org/.ratpoisonrc
+
+# unbind all the things
+source .ratpoison_unbind
+
+# warp sounds insane, turn it off
+warp off
+
+# set command key
+escape Pause
+
+# make status/input bar look decent
+set bgcolor black
+set fgcolor grey95
+set font -b&h-lucidatypewriter-bold-r-normal-sans-18-180-75-75-m-110-iso8859-1
+set inputwidth 1000
+set bargravity center
+set barpadding 15 15
+msgwait 3.5
+
+# set window title
+bind T title
+
+# close a window
+bind k delete
+
+# kill the window's X connection
+bind K kill
+
+# show the time
+bind t time
+
+# lock screen
+bind L exec xscreensaver-command -lock 
+
+# use dmenu, which is cool
+bind period exec dmenu_run
+
+# bind window numbers
+bind 0 select 0
+bind 1 select 1
+bind 2 select 2
+bind 3 select 3
+bind 4 select 4
+bind 5 select 5
+bind 6 select 6
+bind 7 select 7
+bind 8 select 8
+bind 9 select 9
+bind minus select -
+
+# pick a window
+bind apostrophe select
+
+# internal command prompt
+bind colon colon
+
+# exec a shell command
+bind exclam exec
+
+# window info
+bind i info 
+
+# window list
+bind w windows
+
+# key list
+bind question help
+
+# switch to previous window - command key again
+bind Pause other
+
+# windows with dmenu
+# from http://arun.wordpress.com/2010/09/23/ratpoison-and-dmenu/
+bind W exec $(ratpoison -c "select `ratpoison -c "windows" | dmenu -i -nb '#000000' -nf '#777777' -sb '#770000' -sf '#ffffff' -fn '-*-dina-medium-r-normal-*-12-*-*-*-*-*-*-*' -p ':: ' | awk '{print $1}'`")
