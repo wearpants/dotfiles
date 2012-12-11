@@ -4,40 +4,40 @@ from libqtile import layout, bar, widget
 
 keys = [
     Key(
-        ["mod1"], "k",
+        ["mod4"], "k",
         lazy.layout.down()
     ),
     Key(
-        ["mod1"], "j",
+        ["mod4"], "j",
         lazy.layout.up()
     ),
     Key(
-        ["mod1", "control"], "k",
+        ["mod4", "control"], "k",
         lazy.layout.shuffle_down()
     ),
     Key(
-        ["mod1", "control"], "j",
+        ["mod4", "control"], "j",
         lazy.layout.shuffle_up()
     ),
     Key(
-        ["mod1"], "space",
+        ["mod4"], "space",
         lazy.layout.next()
     ),
     Key(
-        ["mod1", "shift"], "space",
+        ["mod4", "shift"], "space",
         lazy.layout.rotate()
     ),
     Key(
-        ["mod1", "shift"], "Return",
+        ["mod4", "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key(["mod1"], "h",      lazy.to_screen(1)),
-    Key(["mod1"], "l",      lazy.to_screen(0)),
-    Key(["mod1"], "Return", lazy.spawn("xterm")),
-    Key(["mod1"], "Tab",    lazy.nextlayout()),
-    Key(["mod1"], "w",      lazy.window.kill()),
+    Key(["mod4"], "h",      lazy.to_screen(1)),
+    Key(["mod4"], "l",      lazy.to_screen(0)),
+    Key(["mod4"], "Return", lazy.spawn("xterm")),
+    Key(["mod4"], "Tab",    lazy.nextlayout()),
+    Key(["mod4"], "w",      lazy.window.kill()),
 
-    Key(["mod1", "control"], "r", lazy.restart()),
+    Key(["mod4", "control"], "r", lazy.restart()),
 ]
 
 groups = [
@@ -52,10 +52,10 @@ groups = [
 ]
 for i in groups:
     keys.append(
-        Key(["mod1"], i.name, lazy.group[i.name].toscreen())
+        Key(["mod4"], i.name, lazy.group[i.name].toscreen())
     )
     keys.append(
-        Key(["mod1", "shift"], i.name, lazy.window.togroup(i.name))
+        Key(["mod4", "shift"], i.name, lazy.window.togroup(i.name))
     )
 
 layouts = [
