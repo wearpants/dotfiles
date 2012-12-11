@@ -38,6 +38,7 @@ keys = [
     Key(["mod4"], "w",      lazy.window.kill()),
 
     Key(["mod4", "control"], "r", lazy.restart()),
+    Key(["mod4", "control"], "q", lazy.shutdown()),
 ]
 
 groups = [
