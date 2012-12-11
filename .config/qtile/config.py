@@ -20,19 +20,29 @@ keys = [
         lazy.layout.shuffle_up()
     ),
     Key(
-        ["mod4"], "space",
+        ["mod4"], "l",
         lazy.layout.next()
     ),
     Key(
-        ["mod4", "shift"], "space",
+        ["mod4"], "h",
+        lazy.layout.previous()
+    ),
+    Key(
+        ["mod4", "control"], "l",
+        lazy.layout.client_to_next()
+    ),
+    Key(
+        ["mod4", "control"], "h",
+        lazy.layout.client_to_previous()
+    ),
+    Key(
+        ["mod4", "control"], "space",
         lazy.layout.rotate()
     ),
     Key(
-        ["mod4", "shift"], "Return",
+        ["mod4", "shift"], "space",
         lazy.layout.toggle_split()
     ),
-    Key(["mod4"], "h",      lazy.to_screen(1)),
-    Key(["mod4"], "l",      lazy.to_screen(0)),
     Key(["mod4"], "Return", lazy.spawn("xterm")),
     Key(["mod4"], "Tab",    lazy.nextlayout()),
     Key(["mod4"], "w",      lazy.window.kill()),
