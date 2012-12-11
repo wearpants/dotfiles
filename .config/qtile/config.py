@@ -66,12 +66,12 @@ for i in groups:
         Key(["mod4"], i.name, lazy.group[i.name].toscreen())
     )
     keys.append(
-        Key(["mod4", "shift"], i.name, lazy.window.togroup(i.name))
+        Key(["mod4", "control"], i.name, lazy.window.togroup(i.name))
     )
 
 layouts = [
     layout.Max(),
-    layout.Stack(stacks=2)
+    layout.Stack(stacks=2, border_focus="#0000FF", border_normal="#888888", border_width=1)
 ]
 
 screens = [
