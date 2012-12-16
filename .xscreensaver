@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.11 for faceplant on Wed Sep 26 14:36:44 2012.
+# Written by xscreensaver-demo 5.15 for pivot on Thu Dec  6 23:43:07 2012.
 # http://www.jwz.org/xscreensaver/
 
 timeout:	0:05:00
@@ -25,6 +25,7 @@ captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
 dpmsEnabled:	True
+dpmsQuickOff:	False
 dpmsStandby:	0:10:00
 dpmsSuspend:	0:15:00
 dpmsOff:	0:20:00
@@ -241,15 +242,17 @@ programs:								      \
 - GL: 				rubikblocks -root			    \n\
 				unicode -root -foreground white		      \
 				  -background black			    \n\
+- GL: 				companioncube -root			    \n\
+- GL: 				hilbert -root				    \n\
+- GL: 				tronbit -root				    \n\
 
 
 pointerPollTime:    0:00:05
 pointerHysteresis:  10
 windowCreationTimeout:0:00:30
 initialDelay:	0:00:00
-sgiSaverExtension:  True
-xidleExtension:	True
 GetViewPortIsFullOfLies:False
 procInterrupts:	True
+xinputExtensionDev: False
 overlayStderr:	True
 
