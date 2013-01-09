@@ -2,6 +2,8 @@ from libqtile.manager import Key, Screen, Group
 from libqtile.command import lazy
 from libqtile import layout, bar, widget
 
+import socket
+
 keys = [
     Key(
         ["mod4"], "k",
@@ -36,14 +38,14 @@ keys = [
         lazy.layout.client_to_previous()
     ),
     Key(
-        ["mod4", "control"], "space",
+        ["mod4", "shift"], "space",
         lazy.layout.rotate()
     ),
     Key(
-        ["mod4", "shift"], "space",
+        ["mod4", "control"], "space",
         lazy.layout.toggle_split()
     ),
-    Key(["mod4"], "Return", lazy.spawn("xterm")),
+    Key(["mod4"], "Return", lazy.spawn("xfce4-terminal")),
     Key(["mod4"], "Tab",    lazy.nextlayout()),
     Key(["mod4"], "w",      lazy.window.kill()),
 
@@ -71,7 +73,7 @@ for i in groups:
 
 layouts = [
     layout.Max(),
-    layout.Stack(stacks=2, border_focus="#0000FF", border_normal="#888888", border_width=1)
+    layout.Stack(stacks=2, border_focus="#0000FF", border_normal="#888888", border_width=2)
 ]
 
 screens = [
@@ -80,7 +82,8 @@ screens = [
                     [
                         widget.GroupBox(),
                         widget.WindowName(),
-                        widget.TextBox("default", "default config")
+                        widget.TextBox('hostname', socket.gethostname()),
+                        widget.Clock(), 
                     ],
                     30,
                 ),
