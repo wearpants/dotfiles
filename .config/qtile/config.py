@@ -42,7 +42,7 @@ keys = [
         lazy.layout.rotate()
     ),
     Key(
-        ["mod4", "control"], "space",
+        ["mod4", "control"], "Tab",
         lazy.layout.toggle_split()
     ),
     Key(["mod4"], "Return", lazy.spawn("xfce4-terminal")),
