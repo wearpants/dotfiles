@@ -3,11 +3,6 @@
 # exec lxsession ratpoison?
 echo -n "Starting .xsession " && date
 
-# turn off laptop screen & big screen to high res
-#xrandr --output LVDS1 --off
-#xrandr --output VGA1 --preferred
-#echo "Xrandr success"
-
 # monitor power management or whatever
 xset dpms 300 600 1200
 
