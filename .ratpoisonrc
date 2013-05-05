@@ -5,9 +5,9 @@ source .ratpoison_unbind
 
 # warp sounds insane, turn it off
 warp off
-
+[
 # set command key
-escape Pause
+escape KP_Enter
 
 # make status/input bar look decent
 set bgcolor black
@@ -68,7 +68,7 @@ bind w windows
 bind question help
 
 # switch to previous window - command key again
-bind Pause other
+bind KP_Enter other
 
 # windows with dmenu
 # from http://arun.wordpress.com/2010/09/23/ratpoison-and-dmenu/
