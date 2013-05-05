@@ -23,6 +23,9 @@ xscreensaver -no-splash &
 # YOU WILL TAKE BREAKS YES YOU WILL RESISTANCE IS F U TILE
 xwrits +mouse +breakclock typetime=50 breaktime=10 canceltime=3 after=6 flashtime=:.2 after=9 +finger &
 
+# redshift, adjust color tempature by time of day
+redshift -l 41.8500:-87.6500 -t 6000:4400 &
+
 # make the mouse hide - XXX this will prolly hate virtualbox
 # unclutter
 
