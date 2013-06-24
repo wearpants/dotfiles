@@ -46,6 +46,7 @@ keys = [
         lazy.layout.toggle_split()
     ),
     Key(["mod4"], "Return", lazy.spawn("xfce4-terminal")),
+#    Key(["mod4"], "Space", lazy.spawn("dmenu_run")),
     Key(["mod4"], "Tab",    lazy.nextlayout()),
     Key(["mod4"], "w",      lazy.window.kill()),
 
